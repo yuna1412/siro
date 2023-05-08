@@ -1,0 +1,28 @@
+@import "../_variables";
+.container{
+    padding: $padding;
+    max-width: $max-width;
+    margin: $margin;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    @media screen and (max-width: 768px){
+        padding: 0 4%;
+        max-width: 768px;
+        margin-bottom: 40px;
+    }
+    .Url{
+        margin-right: 33px;
+        text-decoration-line: none;
+        color: rgb(175, 175, 175);
+        transition: $transition;
+        font-size: 13px;
+        @media screen and (max-width: 768px){
+            margin-right: 20px;
+        }
+        &:hover{
+            color: rgb(0, 0, 0);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import "../_variables";
+.container{
+    padding: $padding;
+    max-width: $max-width;
+    margin: $margin;
+    margin-bottom: 35px;
+    @media screen and (max-width: 768px){
+        padding: 0 4%;
+        max-width: 768px;
+        margin-top: 5px;
+        margin-bottom: 18px;
+    }
+    .item{
+        display: flex;
+        flex-direction: row;
+        width: 90px;
+        .text{
+            margin-right: 10px;
+            font-size: 14px;
+            text-decoration-line: none;
+            color: rgb(175, 175, 175);
+            position: relative;
+            transition: $transition;
+            &::before{
+                content: "";
+                position: absolute;
+                margin-top: 4px;
+                text-decoration-line: none;
+                left: 80px;
+                width: 5px;
+                height: 5px;
+                border-top: 1px solid rgb(175, 175, 175);
+                border-right: 1px solid rgb(175, 175, 175);
+                transform: rotate(135deg);
+                transition: 0.2s;
+            }
+            &:hover{
+                color: rgb(0, 0, 0);
+                &::before{
+                    border-color: black;
+                }
+            }
+        }
+    }
+}
